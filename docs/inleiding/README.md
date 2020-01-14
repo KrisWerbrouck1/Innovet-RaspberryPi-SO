@@ -72,7 +72,7 @@ Wanneer alle info op de SD-kaart staat kan deze in de raspberry pi geplaatst wor
 
 Na het aansluiten van een toetsenbord, muis, voeding en een scherm via HDMI of micro HDMI aansluiting (Rapsberry Pi 4) krijg je een grafische omgeving of een terminial omgeving afhankelijk van de gekozen versie van Raspbian.
 
-![Desktop](./assets/desktop.PNG)
+![Desktop](./assets/desktop.png)
 
 # Raspberry pi vanop afstand bedienen
 
@@ -92,7 +92,7 @@ Start de Raspberry Pi opnieuw op en zoek het IP-adres op via LXTernminal.
 
 Type de instructie ifconfig in de LXTerminal
 
-![Ifconfig](./assets/ifconfig.PNG)
+![Ifconfig](./assets/ifconfig.png)
 
 Het IP-adres wordt weergegeven. Noteer of onthoud het IP-adres van de raspberry pi.
 
