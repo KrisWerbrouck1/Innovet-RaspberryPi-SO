@@ -101,3 +101,14 @@ Geef het IP-adres in VNC-Viewer.
 ![Ifconfig](./assets/VNCViewer.png)
 
 De Raspberry Pi kan nu vanop afstand bediend worden.
+
+# Opdrachten
+
+Zoek volgende informatie op het internet op:
+* Hoeveel RAM-geheugen is aanwezig op de recentste Raspberry PI borden.
+* Welke poort wordt gebruikt tot en met versie 3 van de raspberry pi om het beeld zichtbaar te maken.
+* Welke poort wordt gebruikt vanaf versie 4 van de raspberry pi om het beeld zichtbaar te maken. 
+* Welke versie van Bluetooth is aanwezig op de recentste versie van de raspberry pi.
+* Welke versie van Wifi is aanwezig op de recentste versie van de raspberry pi.
+
+
