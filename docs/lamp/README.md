@@ -15,7 +15,7 @@ Voor het installeren wordt Raspbian best bijgewerkt naar de nieuwste versie. Dit
 
 ```console
 sudo apt update
-sudo apt upgrade -y
+sudo apt upgrade
 ```
 
 ## Apache HTTP-server
@@ -31,7 +31,7 @@ Het HTTP-protocol (Hyper Tekst Transfer Protocol) is gemaakt voor Client-server 
 Apache kan geïnstalleerd worden met de apt-pakketmanager. Voer volgende opdracht uit in de LXTerminal:
 
 ```console
-sudo apt install apache2 -y
+sudo apt install apache2
 ```
 
 ### Uitproberen
@@ -48,7 +48,19 @@ ifconfig
 
 ### Opdracht
 
-Maak een eenvoudige webpagina en plaats deze in de map /var/www/html
+Maak een eenvoudige webpagina demo1.html en plaats deze in de map /var/www/html
+
+Hiervoor installeren we eerst leafpad.
+
+```console
+sudo apt install leafpad
+```
+start leafpad op via de LXTerminal. Het is nodig leafpad als super user op te starten anders is het niet mogelijk een bestand te bewaren in de map /var/www/html.
+
+```console
+sudo leafpad
+```
+Plaats onderstaande html pagina in het bestand demo1.html.
 
 Voorbeeldpagina
 

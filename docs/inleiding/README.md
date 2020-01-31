@@ -74,6 +74,14 @@ Na het aansluiten van een toetsenbord, muis, voeding en een scherm via HDMI of m
 
 ![Desktop](./assets/desktop.png)
 
+Vervolgens moet het land, de taal en de tijdszone ingesteld worden.
+
+De standaard gebruiker is pi en het paswoord raspberry. Het is echter aan te raden dit paswoord aan te passen.
+
+Eveneens kan er een verbinding gemaakt worden met het wifi netwerk.
+
+Als laatste stap wordt gevraagd om de software te updaten. Dit zal even duren. Neem gerust terug een kop koffie.
+
 # Raspberry pi vanop afstand bedienen
 
 Om de raspberry pi vanop afstand via de grafische interface te bedienen kan gebruikt gemaakt worden van VNC. VNC moet gedownload worden op de computer die gebruikt wordt voor de externe toegang. [VNC Viewer](https://www.realvnc.com/en/connect/download/viewer/)
@@ -101,6 +109,15 @@ Geef het IP-adres in VNC-Viewer.
 ![Ifconfig](./assets/VNCViewer.png)
 
 De Raspberry Pi kan nu vanop afstand bediend worden.
+
+Indien er als melding komt "Cannot currently show the desktop" moet op de LXTerminal ingelogd worden.
+Met volgende instructie kan de configuratie aangepast worden.
+
+```console
+sudo raspi-config
+```
+
+Kies vervolgens Advanced Options - A5 Resolution en kies een resolutie.
 
 # Opdrachten
 
