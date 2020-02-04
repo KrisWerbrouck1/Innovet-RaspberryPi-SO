@@ -99,10 +99,6 @@ Een database is een verzameling van gegevens die op een georganiseerde manier zi
 
 ![kast](./assets/kast.jpg)
 
-### Database Management System (DBMS)
-
-Nog toevoegen
-
 ### Tabellen
 
 Wanneer informatie in een archiefkast wordt geplaatst, gooit u deze niet allemaal in dezelfde lade. U maakt lades voor specifieke informatie.
@@ -148,7 +144,7 @@ sudo mysql -u root
 * mysql: dit vertelt uw opdrachtpromp of powerschell om de mysql-client te starten.
 * -u root: de -u vertelt de client om in te loggen met de opgegeven naam, in dit geval 'root'.
 
-Je zou nu verbonden moeten zijn
+Je zou nu verbonden moeten zijn en volgende tekst zien in de LXTerminal.
 
 ```console
 MariaDB [(none)]>
@@ -162,7 +158,7 @@ Met SQL kunnen we veel dingen doen. De twee meest gebruikte soorten zijn:
 
 ### Aanmaken database
 
-Voordat we iets in SQL kunnen doen, moeten we een database maken. Dit kan worden gedaan met de CREATE DATABASE query.
+Voordat we iets in SQL kunnen doen, moeten we een database maken. Dit kan worden gedaan met de CREATE DATABASE query. In onderstaand voorbeeld wordt de database bookstore aangemaakt.
 
 ```SQL
 CREATE DATABASE bookstore;
