@@ -220,7 +220,7 @@ Als we bestaande gegevens in een tabel willen wijzigen, kunt u de UPDATE query g
 UPDATE books SET price = 23.50 WHERE isbn = "9781449303969";
 ```
 
-##### Verwijderen
+#### Verwijderen
 
 De laatste manipulatie van gegevens is de DELETE. Met DELETE kunnen we gegevens uit de tabel verwijderen. Met DELETE wordt een volledige rij verwijderd in de tabel. Het is belangrijk om de WHERE clausule te gebruiken om te voorkomen dat alle rijen en dus alle gegevens in een tabel worden verwijderd.
 
