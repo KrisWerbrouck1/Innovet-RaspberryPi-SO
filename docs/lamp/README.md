@@ -223,3 +223,55 @@ De laatste manipulatie van gegevens is de DELETE. Met DELETE kunnen we gegevens 
 ```SQL
 DELETE FROM books WHERE isbn = "9781449303969";
 ```
+
+## PhpMyAdmin
+
+PhpMyAdmin is een gratis en open source beheertools voor MySQL en MariaDB. PhpMyAdmin is een web applicatie die geschreven is in PHP. Met PHPMyAdmin kunnen databases op een grafische manier beheerd worden.
+
+### Installatie
+
+PhpMyAdmin kan geinstalleerd worden via de apt-pakketmanager.
+
+```console
+sudo apt install phpmyadmin -y
+```
+
+PhpMyAdmin moet toegevoegd worden in de apache configuratie.
+
+```console
+sudo nano /etc/apache2/apache2.conf
+```
+
+Voeg in het bestand apache2.conf volgende regel toe
+
+```console
+include /etc/phpmyadmin/apache.conf
+```
+
+![Configuratie PhpMyAdmin](./assets/configPhpMyAdmin.png)
+
+Herstart de apache server
+
+```console
+sudo service apache2 restart
+```
+
+Vanaf nu is het mogelijk om te surfen naar *[http://localhost/phpmyadmin](http://localhost/phpmyadmin) 
+
+In oude versies van PhpMyAdmin was het nog mogelijk om het paswoord van de standaardgebruikersnaam root niet in te vullen. Wegens veiligheidsredenen is dit niet meer wenselijk en mogelijk.
+
+Een paswoord toekennen aan de root gebruiker:
+
+```console
+sudo mysql -u root
+```
+Vul in plaats van NEWPASSWORD een gekozen paswoord in.
+
+```SQL
+UPDATE mysql.user SET plugin = 'mysql_native_password', 
+  Password = PASSWORD('NEWPASSWORD') WHERE User = 'root';
+FLUSH PRIVILEGES;
+```
+
+Nu moet het mogelijk zijn in de loggen op phpMyAdmin met de gebruiker root en het gekozen paswoord.
+
