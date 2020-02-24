@@ -148,6 +148,12 @@ sudo mysql -u root
 * mysql: starten mysql-client.
 * -u root: de -u vertelt de client om in te loggen met de opgegeven naam, in dit geval 'root'.
 
+Indien er al een paswoord is ingesteld krijg je een foutmelding. Start in dit geval de mysql client via volgende regel.
+
+```console
+sudo mysql -u root -p
+```
+
 Je zou nu verbonden moeten zijn en volgende tekst zien in de LXTerminal.
 
 ```console
@@ -168,21 +174,29 @@ Voordat we iets in SQL kunnen doen, moeten we een database maken. Dit kan worden
 CREATE DATABASE bookstore;
 ```
 
+### Verwijderen database
+
+Wanneer je de database terug wil verwijderen is dit mogelijk met de DROP DATABASE query. In onderstaand voorbeeld wordt de database bookstore verwijderd.
+
+```SQL
+DROP DATABASE bookstore;
+```
+
 ### Aanmaken tabel in database
 
-Nu hebben we een database die tabellen en hun gegevens kan groeperen. Vervolgens maken we een nieuwe tabel aan in de database met de CREATE TABLE query. De tabel naam is books. We moeten eveneens de verschillende kolommen definiëren die in de tabel zullen voorkomen. Elke kolom heeft een naam, datatype en extra eigenschappen.
+Nu hebben we een database die tabellen en hun gegevens kan groeperen. Vervolgens maken we een nieuwe tabel aan in de database met de CREATE TABLE query. De tabel naam is books en wordt in onderstaande voorbeeld aangemaakt in de database bookstore. We moeten eveneens de verschillende kolommen definiëren die in de tabel zullen voorkomen. Elke kolom heeft een naam, datatype en extra eigenschappen.
 Om een tabel te maken waarin gegevens over boeken, zoals ISBN, naam, beschrijving en prijs, kunnen worden opgeslagen, kunnen we de volgende query schrijven en uitvoeren.
 
 ```SQL
-CREATE TABLE books (
+CREATE TABLE bookstore.books (
    id INT NOT NULL AUTO_INCREMENT,
-   isbn BIGINT NOT NULL,
-   name TEXT NOT NULL,
+   isbn CHAR(13) NOT NULL,
+   name VARCHAR(64) NOT NULL,
    description TEXT,
-   price FLOAT,
-   PRIMARY KEY id
+   price DECIMAL(6,2),
+   PRIMARY KEY(id)
 );
-```
+```     
 
 ### Gegevensmanipulatie
 
@@ -193,7 +207,7 @@ Er zijn veel dingen die we met gegevens kunnen doen. De acties die kunnen worden
 Gegevens invoeren in een tabel met SQL kan met de INSERT INTO query. Vervolgens voegen we de tabel toe waaraan we gegevens willen toevoegen en de waarden die in die kolommen moeten worden opgeslagen.
 
 ```SQL
-INSERT INTO books (isbn, name, description, price) VALUES ("9781449303969", "Learning MySQL", "Good book", 33.50);
+INSERT INTO bookstore.books (isbn, name, description, price) VALUES ("9781449303969", "Learning MySQL", "Good book", 33.50);
 ```
 
 #### Lezen
@@ -201,7 +215,7 @@ INSERT INTO books (isbn, name, description, price) VALUES ("9781449303969", "Lea
 Nu we wat gegevens in de books tabel hebben, kunnen we deze ook uitlezen. Dit kan worden gedaan met behulp van de SELECT query. 
 
 ```SQL
-SELECT isbn, name, description, price FROM books;
+SELECT isbn, name, description, price FROM bookstore.books;
 ```
 
 Resultaat
@@ -219,7 +233,7 @@ Resultaat
 Als we bestaande gegevens in een tabel willen wijzigen, kunt u de UPDATE query gebruiken. De UPDATE query geeft de kolomnaam en -waarde die u wilt wijzigen. In dit geval is het belangrijk om een WHERE clausule aan de query toe te voegen om de wijziging alleen toe te passen op het boek dat een specifiek isbn-nummer heeft. Als u het weglaat of vergeet WHERE, krijgen alle boeken de nieuwe prijs. Dit is meestal niet wat je zou willen.
 
 ```SQL
-UPDATE books SET price = 23.50 WHERE isbn = "9781449303969";
+UPDATE bookstore.books SET price = 23.50 WHERE isbn = "9781449303969";
 ```
 
 #### Verwijderen
@@ -227,9 +241,14 @@ UPDATE books SET price = 23.50 WHERE isbn = "9781449303969";
 De laatste manipulatie van gegevens is de DELETE. Met DELETE kunnen we gegevens uit de tabel verwijderen. Met DELETE wordt een volledige rij verwijderd in de tabel. Het is belangrijk om de WHERE clausule te gebruiken om te voorkomen dat alle rijen en dus alle gegevens in een tabel worden verwijderd.
 
 ```SQL
-DELETE FROM books WHERE isbn = "9781449303969";
+DELETE FROM bookstore.books WHERE isbn = "9781449303969";
 ```
+## Opdracht SQL
 
+Maak een database meetresultaten met een tabel sensorTemperatuur.
+Volgende kolommen moeten voorkomen in de tabel sensorTemperatuur.
+* id als int
+* 
 ## PhpMyAdmin
 
 PhpMyAdmin is een gratis en open source beheertools voor MySQL en MariaDB. PhpMyAdmin is een web applicatie die geschreven is in PHP. Met PHPMyAdmin kunnen databases op een grafische manier beheerd worden.
