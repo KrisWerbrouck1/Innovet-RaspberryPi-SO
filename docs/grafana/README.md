@@ -64,3 +64,6 @@ Voeg een Query toe
 
 ![Toevoegen Query](./assets/GrafanaAddQuery.png)
 
+De grafiek wordt weergegeven
+
+![Weergave](./assets/GrafanaResultaat.png)
