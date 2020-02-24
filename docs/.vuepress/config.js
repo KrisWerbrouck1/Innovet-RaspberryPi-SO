@@ -7,7 +7,12 @@ module.exports = {
       { text: 'Company', link: 'https://vti.sint-rembert.be/' },
       { text: 'License', link: '/LICENSE.md' },
     ],
-    sidebar: [['/', 'Home'], ['/inleiding/', 'Inleiding'], ['/lamp/', 'LAMP']],
+    sidebar: [
+      ['/', 'Home'],
+      ['/inleiding/', 'Inleiding'],
+      ['/lamp/', 'LAMP'],
+      ['/arduino-to-raspberry-pi/', 'Arduino To Raspberry pi']
+    ],
     repo: 'https://github.com/KrisWerbrouck1/Innovet-RaspberryPi-SO.git',
     docsDir: 'docs',
     docsBranch: 'master'
