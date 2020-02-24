@@ -1,6 +1,6 @@
 # LAMP-server
 
-Standaard wordt Raspbian (een Linux distributie aangepast voor de Raspberry Pi) gebruikt als besturingssysteem op de Rapsberry Pi. Hierdoor kan de Raspberry Pi functioneren als een webserver.  In veel toepassingen wordt hiervoor de LAMP-stack gebruik. Dit is open source software. LAMP staat voor:
+Standaard wordt Raspbian (een Linux distributie aangepast voor de Raspberry Pi) gebruikt als besturingssysteem op de Rapsberry Pi. Mits het toevoegen van de nodige programma's is het mogelijk de raspberry pi te gebruiken als webserver en database. In deze cursus gebruiken we de LAMP-stack hiervoor. De LAMP-stack is open source software en staat voor:
 * Linux: het besturingssysteem
 * Apache: een HTTP-webserver
 * MySQL: een database
@@ -8,7 +8,8 @@ Standaard wordt Raspbian (een Linux distributie aangepast voor de Raspberry Pi) 
 
 ![LAMP](./assets/lamp.jpg)
 
-# Lamp-componenten installeren
+# Lamp-componenten installeren en gebruiken
+
 ## Raspbian bijwerken
 
 Voor het installeren wordt Raspbian best bijgewerkt naar de nieuwste versie. Dit is mogelijk met volgende opdrachten in de LXTerminal:
@@ -20,7 +21,7 @@ sudo apt upgrade
 
 ## Apache HTTP-server
 
-Het internet is een groot netwerk van computers. Niet alle computers hebben dezelfde taak. Servers zijn normaal altijd beschikbaar en bieden informatie aan. Clients zijn meestal niet altijd beschikbaar en vragen informatie op aan server. Dit model wordt het client/server model genoemd.
+Het internet is een groot netwerk van computers. Niet alle computers hebben dezelfde taak. Servers zijn normaal altijd beschikbaar en bieden diensten aan. Clients zijn meestal niet altijd beschikbaar en vragen informatie op aan servers. Dit model wordt het client/server model genoemd.
 
 ### HTTP-protocol
 
@@ -34,7 +35,7 @@ Apache kan geïnstalleerd worden met de apt-pakketmanager. Voer volgende opdrach
 sudo apt install apache2
 ```
 
-### Uitproberen
+### Oefeningen
 
 Als alles goed is gegaan, functioneert de Raspberry Pi al een HTTP-server met behulp van Apache. De eenvoudigste manier om dit te testen is op de raspberry pi zelf. Open de browser en surf naar localhost. U moet de Apache Debian standaardpagina krijgen.
 
@@ -45,8 +46,9 @@ Het is ook mogelijk om vanaf een andere machine toegang te krijgen tot de webpag
 ```console
 ifconfig
 ```
+Ga naar de standaarpagina op de Apache server vanop een andere computer in het netwerk.
 
-### Opdracht
+## Eenvoudige webpagina op Apache server
 
 Maak een eenvoudige webpagina demo1.html en plaats deze in de map /var/www/html
 
@@ -79,18 +81,20 @@ Voorbeeldpagina
 </html>
 ```
 
+Een browser opent standaard het bestand index.html of index.php. Pas deze pagina op de raspberry pi aan.
+
 ## MySQL-database
 
-MySQL is een van de populairste databasebeheerssystemen ter wereld. Het kan worden gebruikt voor kleine ontwikkelingsprojecten tot grote sites. 
+MySQL is een van de populairste databasebeheerssystemen ter wereld. MySQL kan worden gebruikt voor kleine ontwikkelingsprojecten tot grote sites. 
 
-MySQL en MariaDB zijn open source en gratis te gebruiken, waardoor ze veel gebruikt worden. 
+MySQL en MariaDB zijn open source en gratis te gebruiken. 
 
 ![Mariadb vs MySQL](./assets/mariadb-vs-mysql.jpg)
 
 
 MySQL versus MariaDB
 
-MySQL is van Oracle en is niet meer volledig open source. Dit komt niet meer overeen met het oorspronkelijk idee van de ontwikkelaar. Daarom hebben de ontwikkelaars een fork gecreëerd waar de closed source onderdelen vervangen zijn door open-source. Deze fork wordt MariaDB genoemd en is volledig open source.
+MySQL was oorsponkelijk volledig open source. Na de overname door Oracle is MySQL echter niet meer volledig open source, wat niet meer overeen komt met het oorspronkelijk idee van de ontwikkelaars. Daarom hebben de ontwikkelaars een fork gecreëerd waar de closed source onderdelen vervangen zijn door open-source. Deze fork wordt MariaDB genoemd en is volledig open source.
 MariaDB en MySQL zijn compatibel.
 
 ### Wat is een database
@@ -123,7 +127,7 @@ Voorbeeld: de temperatuur en lichtsterkte per meting.
 
 ![Rij](./assets/rij.png)
 
-## Installatie 
+## Installatie MariadB
  
 De MariadB (fork van MySQL) kan worden geïnstalleerd met de apt-pakketmanager met volgende opdracht:
 
@@ -141,7 +145,7 @@ U kunt de MySQL-client starten via de terminal.
 sudo mysql -u root
 ```
 
-* mysql: dit vertelt uw opdrachtpromp of powerschell om de mysql-client te starten.
+* mysql: starten mysql-client.
 * -u root: de -u vertelt de client om in te loggen met de opgegeven naam, in dit geval 'root'.
 
 Je zou nu verbonden moeten zijn en volgende tekst zien in de LXTerminal.
@@ -171,10 +175,12 @@ Om een tabel te maken waarin gegevens over boeken, zoals ISBN, naam, beschrijvin
 
 ```SQL
 CREATE TABLE books (
-   isbn CHAR(13) NOT NULL PRIMARY KEY,
-   name VARCHAR(64) NOT NULL,
+   id INT NOT NULL AUTO_INCREMENT,
+   isbn BIGINT NOT NULL,
+   name TEXT NOT NULL,
    description TEXT,
-   price DECIMAL(6,2)
+   price FLOAT,
+   PRIMARY KEY id
 );
 ```
 
@@ -274,4 +280,6 @@ FLUSH PRIVILEGES;
 ```
 
 Nu moet het mogelijk zijn in de loggen op phpMyAdmin met de gebruiker root en het gekozen paswoord.
+
+Opdracht
 
