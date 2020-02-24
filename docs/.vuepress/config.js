@@ -11,7 +11,8 @@ module.exports = {
       ['/', 'Home'],
       ['/inleiding/', 'Inleiding'],
       ['/lamp/', 'LAMP'],
-      ['/arduino-to-raspberry-pi/', 'Arduino To Raspberry pi']
+      ['/arduino-to-raspberry-pi/', 'Arduino To Raspberry pi'],
+      ['/grafana/', 'Grafana']
     ],
     repo: 'https://github.com/KrisWerbrouck1/Innovet-RaspberryPi-SO.git',
     docsDir: 'docs',
