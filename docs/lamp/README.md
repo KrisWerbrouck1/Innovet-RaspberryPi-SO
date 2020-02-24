@@ -390,3 +390,90 @@ Maak een query om volgende data toe te voegen aan de tabel sensor2:
 
 Geef alle waardes uit de tabel sensor2 weer waarbij de temperatuur groter is dan 22°C.
 
+## PHP
+
+PHP is een populaire server scripting taal voor het maken van dynamische webpagina's.
+
+PHP is gratis en open source.
+
+De extensie van de php bestanden is .php. Visual studio code is ideaal geschrikt voor het schrijven van php scripts.
+
+In de cursus plaatsen we de php bestanden op de apache2 webserver in de map var\www\html.
+
+PHP-scripts kunnen gebruikt worden tussen html code. De scripts staten steeds met <?php en eindigen met ?>.
+
+Een voorbeeld van PHP en HTML:
+
+```PHP
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>My first PHP page</h1>
+    <?php
+      echo "Hello World!";  //met echo wordt de tekst "Hello world" weergegeven in de browser.
+    ?>
+  </body>
+</html>
+```
+
+PHP-variabelen beginnen steeds met het $ teken. 
+
+## PHP en MySQL
+
+Met Php is het mogelijk info afkomstig van een browser of microcontroller via een GET request in een database te plaatsen.
+
+Als voorbeeld worden 2 waardes in de tabel "demoTabel" bewaard in de database demoDatabase.
+
+Maak deze tabel en database aan indien ze nog niet bestaan.
+
+Voorbeeldcode: 
+
+```PHP
+<?php
+$servername = "localhost"; //indien het php bestand en de database beide op dezelfde computer staan.
+$username = "root";
+$password = "password";  //Gebruik het opgegeven paswoord  
+$dbname = "demoDatabase";     //database naam
+
+//Parameter 1 via GET in variabele waarde plaatsen
+if(isset($_GET["waarde1"])){
+    $varWaarde1 = $_GET["waarde1"];
+} 
+else { 			//indien geen parameters opgegeven
+    echo "ERROR no key defined in URL!";
+    die();
+}
+echo $varWaarde1;
+
+//Parameter 2 via GET in variabele waarde plaatsen
+
+if(isset($_GET["waarde2"])){
+    $varWaarde2 = $_GET["waarde2"];
+} 
+else { 			//indien geen parameters opgegeven
+    echo "ERROR no key defined in URL!";
+    die();
+}
+echo $varWaarde2;
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+echo "Connection successfully";
+
+//Opstellen query om het tijdstip + de waardes in de database te bewaren.
+$sql = "INSERT INTO demoTabel (tijdstip,waarde1,waarde2) VALUES (NOW(),$varWaarde1,$varWaarde2)";
+
+//querry uitvoeren
+if ($conn->query($sql) === TRUE) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
+$conn->close();
+?>
+```
+
