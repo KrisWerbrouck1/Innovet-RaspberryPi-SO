@@ -245,10 +245,33 @@ DELETE FROM bookstore.books WHERE isbn = "9781449303969";
 ```
 ## Opdracht SQL
 
-Maak een database meetresultaten met een tabel sensorTemperatuur.
-Volgende kolommen moeten voorkomen in de tabel sensorTemperatuur.
-* id als int
-* 
+Maak een database meetresultaten met een tabel sensor1.
+Volgende kolommen moeten voorkomen in de tabel sensor1:
+* id als int met auto_increment
+* tijdstip als DATETIME
+* temperatuur als float
+
+De id is de primary key is id en er mag geen enkele kolom leeg blijven.
+
+Maak een query om volgende data toe te voegen aan de tabel sensor1:
+* tijdstip via NOW()
+* temperatuur van 23.25 graden C.
+
+Voeg vervolgens nogmaals de query uit met een temperatuur van 23.50 graden C.
+
+Wat gebeurt er met de kolom id?
+
+Voeg de tabel sensor2 met volgende kolommen toe:
+* id als int met auto_increment
+* tijdstip als DATETEIME
+* temperatuur als float
+*luchtvochtigheid als float
+
+Maak een query om volgende data toe te voegen aan de tabel sensor2:
+* tijdstip via NOW()
+* temperatuur van 23.25 graden C.
+* luchtvochtigheid van 50 %.
+
 ## PhpMyAdmin
 
 PhpMyAdmin is een gratis en open source beheertools voor MySQL en MariaDB. PhpMyAdmin is een web applicatie die geschreven is in PHP. Met PHPMyAdmin kunnen databases op een grafische manier beheerd worden.
@@ -299,6 +322,4 @@ FLUSH PRIVILEGES;
 ```
 
 Nu moet het mogelijk zijn in de loggen op phpMyAdmin met de gebruiker root en het gekozen paswoord.
-
-Opdracht
 
