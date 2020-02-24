@@ -323,3 +323,70 @@ FLUSH PRIVILEGES;
 
 Nu moet het mogelijk zijn in de loggen op phpMyAdmin met de gebruiker root en het gekozen paswoord.
 
+## Aanmaken database en tabel met PhpMyAdmin
+
+Kies "Nieuw" en geef de database een naam. Voorbeeld "demoDatabase". Klik vervolgens op Aanmaken.
+
+![Create database](./assets/PhpMyAdminAanmaakDatabase.png)
+
+Maak een tabel meetresultaten aan met 4 kolommen.
+
+![Create tabel](./assets/PhpMyAdminAanmaakTabel.png)
+
+Voeg volgende kolommen toe aan de tabel meetresultaten:
+* id als int met auto_increment
+* tijdstip als DATETEIME
+* waarde1 als float
+* waarde2 als float
+
+![Create kolom](./assets/PhpMyAdminAanmaakTabel2.png)
+
+## Opdracht aanmaken database en tabel met PhpMyAdmin
+
+Maak een database meetresultaten1 met een tabel sensor1.
+Volgende kolommen moeten voorkomen in de tabel sensor1:
+* id als int met auto_increment
+* tijdstip als DATETIME
+* temperatuur als float
+
+De id is de primary key is id en er mag geen enkele kolom leeg blijven.
+
+## Query's uitvoeren in PhpMyAdmin
+
+Query's kunnen eveneens geschreven worden in PhpMyAdmin. Je informatie uit een tabel wil weergeven of informatie in een tabel wil toevoegen selecteer je de tabel en kies je vervolgens voor SQL.
+
+![Create kolom](./assets/PhpMyAdminQuery.png)
+
+Het invoeren van een temperatuur in de tabel sensor1 wordt:
+
+![Insert](./assets/PhpMyAdminInsert.png)
+
+Het weergeven van alle waardes waarbij de temperatuur groter is dan 23 °C wordt
+
+![Select](./assets/PhpMyAdminSelect.png)
+
+Het is eveneens mogelijk maar een aantal kolommen weer te geven. In volgende voorbeeld worden enkel het tijdstip en de temperatuur weergeven.
+
+![Select](./assets/PhpMyAdminSelect2.png)
+
+## Opdrachten Query's uitvoeren in PhpMyAdmin
+
+Maak een query om volgende data toe te voegen aan de tabel sensor1:
+* tijdstip via NOW()
+* temperatuur van 22.25 graden C.
+
+Voeg vervolgens nogmaals de query uit met een temperatuur van 22.50 graden C.
+
+Voeg de tabel sensor2 met volgende kolommen toe aan de database meetresultaten:
+* id als int met auto_increment
+* tijdstip als DATETEIME
+* temperatuur als float
+*luchtvochtigheid als float
+
+Maak een query om volgende data toe te voegen aan de tabel sensor2:
+* tijdstip via NOW()
+* temperatuur van 23.25 graden C.
+* luchtvochtigheid van 50 %.
+
+Geef alle waardes uit de tabel sensor2 weer waarbij de temperatuur groter is dan 22°C.
+
