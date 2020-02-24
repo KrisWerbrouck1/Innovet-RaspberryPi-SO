@@ -48,6 +48,17 @@ ifconfig
 ```
 Ga naar de standaarpagina op de Apache server vanop een andere computer in het netwerk.
 
+## Aanpassen rechten Apache server
+
+Om het mogelijk te maken om html bestanden op de Apache server te plaatsen moeten de rechten aangepast worden van de map /var/www/html.
+
+Dit is mogelijk via:
+
+```console
+sudo chown -R pi:www-data /var/www/html/
+sudo chmod -R 770 /var/www/html/
+```
+
 ## Eenvoudige webpagina op Apache server
 
 Maak een eenvoudige webpagina demo1.html en plaats deze in de map /var/www/html
@@ -82,6 +93,8 @@ Voorbeeldpagina
 ```
 
 Een browser opent standaard het bestand index.html of index.php. Pas deze pagina op de raspberry pi aan.
+
+Een alternatieve manier is de pagina demo1.html te schrijven in visual studio code en vervolgens via filezilla op de raspberry pi te plaatsen.
 
 ## MySQL-database
 
@@ -476,4 +489,9 @@ if ($conn->query($sql) === TRUE) {
 $conn->close();
 ?>
 ```
+Bewaar het bestand als dataToMySQL.php en plaats het php bestand via filezilla in de map var/www/html.
+
+Test de werking van het php bestand door 2 waardes via een GET request mee te geven in de browser.
+
+![Test PHP to My SQL in browser](./assets/PhpToMySQL.png)
 
