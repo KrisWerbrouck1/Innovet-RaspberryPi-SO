@@ -2,7 +2,7 @@
 
 We willen sensordata met de ESP8266 via wifi doorsturen naar de raspberry pi. 
 
-In onderstaande arduino programma voor de WemosD1 R2 met ESP8266 microcontroller wordt iedere 10 seconden 2 waardes verzonden naar het php bestand dataToMySQL.php. Dit php bestand scrijft vervolgens de data in de database.
+In onderstaande arduino programma voor de WemosD1 R2 met ESP8266 microcontroller wordt iedere 10 seconden 2 waardes verzonden naar het php bestand dataToMySQL.php. Dit php bestand schrijft vervolgens de data in de database.
 
 
 ```cpp

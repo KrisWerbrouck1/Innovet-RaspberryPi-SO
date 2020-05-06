@@ -107,7 +107,7 @@ MySQL en MariaDB zijn open source en gratis te gebruiken.
 
 MySQL versus MariaDB
 
-MySQL was oorsponkelijk volledig open source. Na de overname door Oracle is MySQL echter niet meer volledig open source, wat niet meer overeen komt met het oorspronkelijk idee van de ontwikkelaars. Daarom hebben de ontwikkelaars een fork gecreëerd waar de closed source onderdelen vervangen zijn door open-source. Deze fork wordt MariaDB genoemd en is volledig open source.
+MySQL was oorspronkelijk volledig open source. Na de overname door Oracle is MySQL echter niet meer volledig open source, wat niet meer overeen komt met het oorspronkelijk idee van de ontwikkelaars. Daarom hebben de ontwikkelaars een fork gecreëerd waar de closed source onderdelen vervangen zijn door open-source. Deze fork wordt MariaDB genoemd en is volledig open source.
 MariaDB en MySQL zijn compatibel.
 
 ### Wat is een database
@@ -291,7 +291,7 @@ PhpMyAdmin is een gratis en open source beheertools voor MySQL en MariaDB. PhpMy
 
 ### Installatie
 
-PhpMyAdmin kan geinstalleerd worden via de apt-pakketmanager.
+PhpMyAdmin kan geïnstalleerd worden via de apt-pakketmanager.
 
 ```console
 sudo apt install phpmyadmin -y
@@ -409,7 +409,7 @@ PHP is een populaire server scripting taal voor het maken van dynamische webpagi
 
 PHP is gratis en open source.
 
-De extensie van de php bestanden is .php. Visual studio code is ideaal geschrikt voor het schrijven van php scripts.
+De extensie van de php bestanden is .php. Visual studio code is ideaal geschikt voor het schrijven van php scripts.
 
 In de cursus plaatsen we de php bestanden op de apache2 webserver in de map var\www\html.
 

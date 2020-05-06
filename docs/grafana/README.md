@@ -27,7 +27,7 @@ sudo systemctl start grafana-server
 
 ### Verbinding maken met MySQL
 
-Wanneer je het IP-adres van de raspberry pi kent is het mogelijk grafana op te staten door het IP-adres in te geven in een browser gevolgd door poort 3000. Voorbeeld
+Wanneer je het IP-adres van de raspberry pi kent is het mogelijk grafana op te starten door het IP-adres in te geven in een browser gevolgd door poort 3000. Voorbeeld:
 
 ![Grafana inloggen](./assets/GrafanaInloggen.png)
 
