@@ -26,7 +26,7 @@ Raspberry pi 3B uit 2018 met o.a. snellere 1,4 GHz processor, gigiabit ethernet 
 
 ![raspberry pi 3B uit 2018](./assets/RaspberryPi3B.png)
 
-Raspberry pi 4 uit 2019 met o.a. snellere 1,5 GHz processor, USB 3.0. De Raspberry pi 4 is eveneens te krijgen in versies met 1, 2 of 4 GB RAM-geheugen.
+Raspberry pi 4 uit 2019 met snellere 1,5 GHz processor en USB 3.0. De Raspberry pi 4 is beschikbaar in versies met 2, 4 of 8 GB RAM-geheugen.
 
 ![raspberry pi 4 uit 2019](./assets/RaspberryPi4B.jpg)
 
@@ -39,6 +39,8 @@ De recentste versies van de raspberry pi beschikken onder andere over:
 * Bluetooth
 * ….
 
+In deze cursus wordt gebruik gemaakt van de Raspberry pi 4B.
+
 # Raspberry pi besturingssystemen
 
 Er zijn verschillende besturingssystemen beschikbaar als image voor de raspberry pi.  Momenteel is het meest gebruikte Raspbian, wat in deze cursus gebruikt wordt.
@@ -47,26 +49,26 @@ Andere besturingssystemen zijn onder andere Ubuntu Mate, Windows 10 IOT core, Ri
 
 # Aanmaken bootable SD-kaart en opstarten Raspberry Pi
 
-Er moet een bootable mico SD-kaart aangemaakt worden waar het besturingssysteem op staat. 
-De laatste versie van Raspbian kan gedownload worden van de Raspberry PI website [download Raspbian](https://www.raspberrypi.org/downloads/)
+Er moet een bootable micro SD-kaart aangemaakt worden waar het besturingssysteem op staat. Download hiervoor volgende software en installeer deze.
+[https://www.raspberrypi.org/software/](https://www.raspberrypi.org/software/)
 
-Op de website heb je de keuze tussen NOOBS en Raspbian.
+Start de software 
 
-NOOBS staat voor New Out Of the Box Software. Dit is een “Opertating System installer” die o.a. Raspbian bevat.
- 
-Er zijn verschillende versie van Raspbian beschikbaar:
-* Met toegevoegde educatieve software;
-* Standaard versie met desktinterface;
-* Lite versie zonder desktopinterface;
+![img](./assets/clip_image007.jpg)
 
-Er is minimaal een SD-kaart van 4 GB nodig. Met het programma etcher.io kan de image op de SD-kaart geplaatst worden.
-[etcher](https://www.balena.io/etcher/)
+Kies Raspberry Pi OS (32-bit) of een ander OS.
 
-Selecteer zeker de correcte driverletter en selecteer de gedownloade image.  Druk vervolgens op de flash knop en ga een koffie drinken.
+![img](./assets/clip_image009.jpg)
 
-![etcher](./assets/etcher.png)
+Kies als opslagapparaat de micro SD-card voor de raspberry pi.
 
-Wanneer alle info op de SD-kaart staat kan deze in de raspberry pi geplaatst worden.
+![img](./assets/clip_image011.jpg)
+
+Klik op SCHRIJF en vervolgens op JA
+
+![img](./assets/clip_image013.jpg)
+
+Plaats de micro SD-card in de raspberry pi en start op.
 
 # Opstarten
 
