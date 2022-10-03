@@ -78,9 +78,9 @@ Na het aansluiten van een toetsenbord, muis, voeding en een scherm via HDMI of m
 
 Vervolgens moet het land, de taal en de tijdszone ingesteld worden.
 
-De standaard gebruiker is pi en het paswoord raspberry. Het is echter aan te raden dit paswoord aan te passen.
-
 Eveneens kan er een verbinding gemaakt worden met het wifi netwerk.
+
+Kies een gebruikersnaam en paswoord.
 
 Als laatste stap wordt gevraagd om de software te updaten. Dit zal even duren. Neem gerust terug een kop koffie.
 
